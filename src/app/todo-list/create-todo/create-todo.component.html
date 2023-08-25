@@ -1,0 +1,14 @@
+<h1>Criar tarefa</h1>
+<div>
+  <div>
+    <label for="titulo">Titulo</label>
+    <input id="titulo" type="text" [(ngModel)]="titulo" />
+  </div>
+  <div>
+    <label for="data">Data</label>
+    <input id="data" type="datetime-local" [(ngModel)]="data" />
+  </div>
+
+  <button (click)="create()">Criar</button>
+</div>
+<button (click)="back()">Voltar</button>
