@@ -1,7 +1,6 @@
 import { Router } from '@angular/router';
 import { TodoListService } from './../todo-list.service';
 import { Component, OnInit } from '@angular/core';
-import { Todo } from '../model/todo.model';
 
 @Component({
   selector: 'app-create-todo',
@@ -26,7 +25,7 @@ export class CreateTodoComponent implements OnInit {
         finish: false,
         id: '0',
         title: this.titulo,
-      } as Todo;
+      };
       this.todoListService.createTodo(todo).subscribe(() => {
         this.router.navigate(['/']);
       });
